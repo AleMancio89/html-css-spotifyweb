@@ -51,7 +51,7 @@ main{
 }
 
 .sidebar_nav_top li:hover{
-  border-left: 2px solid lightgreen;
+  border-left: 2px solid #afff2a;
   color: white;
   cursor: pointer;
 }
@@ -181,6 +181,85 @@ main{
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.navbar{
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar ul li{
+  display: inline-block;
+  list-style-type: none;
+  color: grey;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.navbar ul li:hover{
+  cursor: pointer;
+}
+
+.navbar ul li:hover .underline {
+  visibility: visible;
+}
+
+.underline{
+  background-color: #afff2a;
+  height: 2px;
+  width: 30px;
+  position:relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+}
+
+.recent_player{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.recent_player h1{
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.recent_player h4{
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.recent_player .card p{
+  color: grey;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.music_grid{
+  display: flex;
+}
+
+.card {
+  margin-right: 1rem;
+  flex-basis: calc(100% / 6);
+}
+
+.card img{
+  width: 100%;
+}
+
+
+
+
 
 .player{
   position: fixed;
