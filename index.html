@@ -3,25 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Spotify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-
-    </header>
 
     <main>
+    <!-- Sidebar fixed left with playlists -->
       <section class="sidebar">
+        <div class="sidebar_logo">
+          <img src="img/logo.svg" alt="Logo">
+        </div>
+        <!-- Navbar home -->
+        <div class="sidebar_nav_top">
+          <ul>
+            <li><img src="img/home.svg" alt="Home"> <span>Home</span></li>
+            <li><img src="img/search.svg" alt="Cerca"> <span>Cerca</span></li>
+            <li><img src="img/libreria.svg" alt="Libreria"> <span>La tua libreria</span></li>
+          </ul>
+        </div>
+        <!-- Navbar playlists -->
+        <div class="sidebar_nav_playlist">
+          <p>PLAYLIST</p>
+          <div class="add">
+            <div class="plus">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            <span>Crea Playlist</span>
+          </div>
+          <ul class="playlist_name">
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+          </ul>
 
+        </div>
+        <!-- Install app and log-in/profile -->
+        <div class="sidebar_bot">
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+          <span>Installa app</span>
+          <div class="line">
+
+          </div>
+          <img src="img/profile.svg" alt="Profile">
+          <span>John Doe</span>
+
+        </div>
       </section>
 
       <section class="main-section">
-
+        <div class="topbar">
+          <div class="upgrade_btn">EFFETTUA L'UPGRADE</div>
+        </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="player">
 
 
     </footer>
