@@ -12,7 +12,7 @@
   <body>
 
     <main>
-    <!-- Sidebar fixed left with playlists -->
+      <!-- Sidebar fixed left with playlists -->
       <section class="sidebar">
         <div class="sidebar_logo">
           <img src="img/logo.svg" alt="Logo">
@@ -57,11 +57,28 @@
 
         </div>
       </section>
-
+      <!-- Sidebar for small responsive version -->
+      <section class="sidebar_small">
+        <div class="sidebar_small_logo">
+          <img src="img/logo-small.svg" alt="Logo">
+        </div>
+        <div class="sidebar_small_top">
+          <img src="img/home.svg" alt="Home">
+          <img src="img/search.svg" alt="Cerca">
+          <img src="img/libreria.svg" alt="Libreria">
+        </div>
+        <div class="sidebar_small_bot">
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+          <img src="img/profile.svg" alt="Profile">
+        </div>
+      </section>
+      <!-- Music selection window -->
       <section class="main-section">
+        <!-- Top bar with upgrade button -->
         <div class="topbar">
           <div class="upgrade_btn">EFFETTUA L'UPGRADE</div>
         </div>
+        <!-- Menu selection -->
         <div class="navbar">
           <ul>
             <li>
@@ -90,6 +107,7 @@
             </li>
           </ul>
         </div>
+        <!-- Recently played music list -->
         <div class="recent_player">
           <h1>Recently played</h1>
           <div class="music_grid">
@@ -126,11 +144,95 @@
 
           </div>
         </div>
+        <!-- Created for you, music list -->
+        <div class="created_for">
+          <h1>Creato per John Doe</h1>
+          <p>Più ascolti, più accurati saranno i suggerimenti</p>
+          <div class="music_grid">
+            <div class="card">
+              <img src="img/radar.jpeg" alt="Radar">
+              <h4>Release Radar</h4>
+            </div>
+            <div class="card">
+              <img src="img/mixdaily.jpeg" alt="Daily_mix">
+              <h4>Daily Mix 1</h4>
+            </div>
+
+          </div>
+        </div>
+        <!-- Most popular, music list -->
+        <div class="most_popular">
+          <h1>Artisti più popolari</h1>
+          <p>Più ascolti, più accurati saranno i suggerimenti</p>
+          <div class="music_grid">
+            <div class="card">
+              <img src="img/youg.jpeg" alt="Young&beautiful">
+              <h4>Lana del Rey</h4>
+            </div>
+            <div class="card">
+              <img src="img/einaudi.jpeg" alt="Einaudi">
+              <h4>Ludovico Einaudi</h4>
+            </div>
+
+          </div>
+        </div>
+
       </section>
     </main>
 
     <footer class="player">
-
+      <!-- Bottom music player with information and commands -->
+      <div class="music_player">
+        <div class="playing">
+          <div class="playing_left">
+            <div class="image">
+              <img src="img/sinister.jpeg" alt="Playing">
+            </div>
+            <div class="info">
+              <h5>Sinister</h5>
+              <p>Brano Nome</p>
+            </div>
+          </div>
+          <div class="playing_right">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="main_control">
+          <div class="control_top">
+            <ul>
+              <li><i class="fa fa-random" aria-hidden="true"></i></li>
+              <li><i class="fa fa-step-backward" aria-hidden="true"></i></li>
+              <li><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i></li>
+              <li><i class="fa fa-step-forward" aria-hidden="true"></i></li>
+              <li><i class="fa fa-repeat" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="control_bot">
+            <div class="time">
+              0:25
+            </div>
+            <div class="bar">
+              <div class="bar_light"></div>
+              <div class="bar_green"></div>
+              <div class="bar_ball"></div>
+            </div>
+            <div class="time">
+              4:35
+            </div>
+          </div>
+        </div>
+        <div class="side_control">
+          <i class="fa fa-list-ul" aria-hidden="true"></i>
+          <i class="fa fa-television" aria-hidden="true"></i>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+          <div id="bar_volume">
+            <div id="light_bot"></div>
+            <div id="green_bot"></div>
+            <div id="ball_bot"></div>
+          </div>
+        </div>
+      </div>
 
     </footer>
 

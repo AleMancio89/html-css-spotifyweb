@@ -18,8 +18,52 @@ main{
   overflow: hidden;
 }
 
-/* SIDEBAR */
+/* SIDEBAR SMALL */
 
+.sidebar_small{
+  width: 70px;
+  height: calc(100% - 90px);
+  background-color: black;
+  visibility: hidden;
+  text-align: center;
+  position:relative;
+}
+
+.sidebar_small_logo img{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.sidebar_small_top img{
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sidebar_small_bot{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sidebar_small_bot img{
+  width: 2rem;
+  height: 2rem;
+  background-color: grey;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.sidebar_small_bot i{
+  color: grey;
+}
+
+
+/* SIDEBAR */
 
 .sidebar{
   position:absolute;
@@ -152,6 +196,8 @@ main{
   width: calc(100% - 230px);
   height: calc(100% - 90px);
   background-color: #141922;
+  overflow-y: scroll;
+  min-width: 400px;
 }
 
 .topbar{
@@ -160,6 +206,7 @@ main{
   align-items: center;
   position: fixed;
   height: 90px;
+  min-width: 400px;
   width: calc(100% - 230px);
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -172,7 +219,7 @@ main{
   color: white;
   text-align: center;
   line-height: 40px;
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-size: 0.8rem;
   transition: 1s;
 }
@@ -228,10 +275,10 @@ main{
 
 .recent_player h1{
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.recent_player h4{
+.recent_player h4, .created_for h4, .most_popular h4{
   color: white;
   text-align: center;
   margin-top: 1rem;
@@ -246,20 +293,51 @@ main{
 
 .music_grid{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
+  margin-top: 1rem;
   margin-right: 1rem;
-  flex-basis: calc(100% / 6);
+  flex-basis: calc(100% / 6 - 1rem);
 }
 
 .card img{
   width: 100%;
 }
 
+.created_for{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
+.created_for h1, .most_popular h1{
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
 
+.created_for p, .most_popular p{
+  margin-bottom: 1rem;
+  color: grey;
+  font-size: 0.8rem;
+}
 
+.most_popular{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.most_popular .card img{
+  border-radius: 50%;
+}
+
+.card img::before:hover{
+  opacity: 1;
+  content:"WOW";
+}
+
+/* PLAYER */
 
 .player{
   position: fixed;
@@ -268,4 +346,234 @@ main{
   background-color: #282828;
   width: 100%;
   height: 90px;
+}
+
+.music_player{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.playing{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.playing_left{
+  display:flex;
+  align-items: center;
+}
+
+.playing_left img{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.playing_left h5{
+  color: white;
+}
+
+.playing_left p, .time{
+  font-size: 0.6rem;
+  color: grey;
+}
+
+.playing_right i{
+  margin-left: 0.5rem;
+  color: grey;
+}
+
+.playing_right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main_control{
+  position: relative;
+  min-width: 200px;
+}
+
+.control_top{
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control_top ul{
+  display: flex;
+  align-items: center;
+}
+
+.control_top ul li{
+  list-style-type: none;
+  margin-left: 1.2rem;
+  color: white;
+}
+
+
+.control_bot{
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar{
+  position: relative;
+  width: 75%;
+  height: 3px;
+  background-color: grey;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.bar_light{
+  width: 20%;
+  height: 3px;
+  background-color: lightgrey;
+  border-radius: 3px;
+}
+
+.bar_green{
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 3px;
+  background-color: #afff2a;
+  border-radius: 3px;
+  display: none;
+}
+
+.bar_ball{
+  position: absolute;
+  top: -3px;
+  left: 20%;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: lightgrey;
+}
+
+.bar:hover .bar_green, .bar:hover .bar_ball{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.side_control{
+  width: 230px;
+  color: grey;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#bar_volume{
+  position: relative;
+  width: 50%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: grey;
+}
+
+#light_bot{
+  width: 20%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: lightgrey;
+}
+
+#green_bot{
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #afff2a;
+  display: none;
+}
+
+#ball_bot{
+  position:absolute;
+  top: -3px;
+  left: 20%;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  display:none;
+}
+
+#bar_volume:hover{
+  cursor: pointer;
+}
+
+#bar_volume:hover #green_bot, #bar_volume:hover #ball_bot{
+  display: inline-block;
+}
+
+.main_control{
+  width: 40%;
+}
+
+.side_control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+  .sidebar{
+    display: none;
+  }
+
+  .sidebar_small{
+    visibility: visible;
+  }
+
+  .main-section{
+    width: calc(100% - 70px);
+  }
+
+  .topbar{
+    width: calc(100% - 70px);
+  }
+
+  .card {
+    flex-basis: calc(100% / 2 - 1rem);
+  }
+
+  .playing_right{
+    flex-direction: column;
+  }
+
+  .time{
+    margin: 0 0.5rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+  .card {
+    flex-basis: calc(100% / 2 - 1rem);
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+  .card {
+    flex-basis: calc(100% / 4 - 1rem);
+  }
+}
+@media screen and (min-width: 1201px){
+
 }
