@@ -308,6 +308,38 @@ main{
   flex-basis: calc(100% / 6 - 1rem);
 }
 
+.image{
+  position: relative;
+}
+
+.overlay {
+	display: none;
+  position: absolute;
+	top: 0;
+	left: 0;
+  bottom: 0;
+  right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 5rem;
+}
+
+.play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.image:hover .overlay {
+	display: inline-block;
+  cursor: pointer;
+}
+
+.round{
+  border-radius: 50%;
+}
+
 .card img{
   width: 100%;
 }
@@ -466,6 +498,7 @@ main{
   width: 9px;
   border-radius: 50%;
   background-color: lightgrey;
+  display: none;
 }
 
 .bar:hover .bar_green, .bar:hover .bar_ball{
