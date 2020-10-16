@@ -102,8 +102,12 @@ main{
   height: 1.6rem;
 }
 
-.sidebar_nav_top li:hover{
+.sidebar_nav_top li:first-of-type{
   border-left: 2px solid #afff2a;
+  color: white;
+}
+
+.sidebar_nav_top li:hover{
   color: white;
   cursor: pointer;
 }
@@ -257,10 +261,11 @@ main{
 }
 
 .navbar ul li:hover{
+  color: white;
   cursor: pointer;
 }
 
-.navbar ul li:hover .underline {
+.navbar ul li:first-of-type .underline{
   visibility: visible;
 }
 
@@ -375,6 +380,10 @@ main{
   content:"WOW";
 }
 
+.most_popular .card{
+  margin-bottom: 1rem;
+}
+
 /* PLAYER */
 
 .player{
@@ -414,6 +423,11 @@ main{
   margin-right: 0.5rem;
 }
 
+.playing_left *:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .playing_left h5{
   color: white;
 }
@@ -433,10 +447,25 @@ main{
   justify-content: flex-end;
 }
 
+.playing_right *:hover{
+  cursor: pointer;
+  color:white;
+}
+
 .main_control{
   position: relative;
   min-width: 200px;
 }
+
+.control_top i:hover{
+  cursor: pointer;
+}
+
+.control_top li:nth-of-type(3):hover{
+  transform: scale(1.1);
+}
+
+
 
 .control_top{
   height: 45px;
